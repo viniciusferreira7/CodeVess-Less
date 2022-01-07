@@ -25,6 +25,10 @@ header{
     background-size:cover;
     background-position:center;
 
+    @media screen and (max-height:915px){
+        height: 85vh;
+    }
+
     .container{
         padding-top:30px ;
     }
@@ -43,12 +47,16 @@ header{
             cursor: pointer;
         }
 
-        ul{
+        .menuDesktop{
             width:40%;
             display: flex;
             justify-content: space-evenly;
             list-style-type: none;
             list-style-position: inside;
+
+            @media screen and (max-width:820px){
+                display: none;
+            }
 
             a{
                 text-decoration: none;
@@ -74,6 +82,114 @@ header{
             
 
             
+        }
+
+
+        .menuMobile{
+            
+            display:none;
+
+            @media screen and (max-width:820px){
+                display: block;
+                
+               
+
+                i{
+                    font-size: 2.3rem;
+                    color: white;
+                    cursor: pointer;
+                    
+                }
+
+                ul{
+                   display:none;
+                   position: absolute;
+                   left: 50%;
+                   transform: translateX(-50%);
+                   width: 90%;
+                   border-radius: 20px;
+                   background-color: rgba(255, 255, 255, .15);  
+                   backdrop-filter: blur(15px);                   
+                   text-align: center;
+                   padding: 5px;
+                   list-style-type: none;
+                   list-style-position: inside;
+
+                   li{
+                    margin-bottom: 10px;
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.3rem;
+                        border-bottom: 2px solid white;
+                    }
+
+                    a:hover{
+                        color: rgba(255, 255, 255, 0.1);
+                        border-color:rgba(255, 255, 255, 0.1) ;
+                    }
+                   }
+                   
+                }
+            }
+        }
+
+    }
+
+    article{
+        padding-top: 9%;
+
+        @media screen and (max-height:915px){
+            position: absolute;
+            top:20%;
+        }
+
+        h1{
+            width: 40%;
+            color: white;
+            font-size: 3rem;
+            font-weight:400;
+
+            @media screen and (max-height:915px){
+                width: 80%;
+                font-size: 2.3rem;
+            }
+        }
+
+        p{
+            width: 50%;
+            color: white;
+            padding: 10px 0;
+            font-size: 1.06rem;
+
+            @media screen and (max-height:915px){
+                width: 80%;
+            }
+        }
+
+        form{
+
+            input[type='text']{
+                width: 100%;
+                max-width: 230px;
+                height: 35px;
+                padding-left: 7px;
+                border-radius: 35px;
+                outline: none;
+                border: 0;
+                margin-bottom: 10px;
+            }
+
+            input[type='submit']{
+                width: 100%;
+                max-width: 180px;
+                height: 44px;
+                border-radius: 35px;
+                border: 0;
+                background-color: #ff5f27;
+                color: white;
+            }
         }
     }
 }

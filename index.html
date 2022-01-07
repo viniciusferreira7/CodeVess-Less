@@ -8,6 +8,7 @@
     <meta name="description" content="Uma empreasa voltada para tecnologia">
     <meta name="keywords" content="code,Vess,empresa,tecnologia">
     <meta name="author" content="Vinicius Ferreira">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +22,39 @@
         <div class="container">
             <nav>
                 <h3>Code Vess</h3>
-                <ul>
+                <ul class="menuDesktop">
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="#">Quero um orçamento</a></li>
-                </ul>
+                </ul><!--menuDesktop-->
+                <div class="menuMobile">
+                    <i class="fas fa-bars"></i>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Quero um orçamento</a></li>
+                    </ul>
+                </div>
             </nav>
+
+            <article>
+                <h1>Você vendendo mais
+                    com automação web.
+                </h1>
+                <p>Nós criamos soluções de marketing para sua empresa vender mais, da melhor forma.</p>
+                <form>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail...">
+                    <input type="submit" value="Quero saber mais!">
+                </form>
+            </article>
         </div><!--container-->
     </header>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/function.js"></script>
 </body>
 </html>
