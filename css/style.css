@@ -14,6 +14,9 @@ body {
   margin: 0 auto;
   padding: 0 2%;
 }
+.clear {
+  clear: both;
+}
 header {
   width: 100%;
   height: 70.25vh;
@@ -94,6 +97,8 @@ header nav .menuMobile {
     padding: 5px;
     list-style-type: none;
     list-style-position: inside;
+    z-index: 2;
+    border-top-right-radius: 0 ;
   }
   header nav .menuMobile ul li {
     margin-bottom: 10px;
@@ -159,6 +164,7 @@ header article form input[type='submit'] {
   border: 0;
   background-color: #ff5f27;
   color: white;
+  cursor: pointer;
 }
 main .container {
   max-width: 1080px;
@@ -268,6 +274,11 @@ main .quarta {
   margin-top: 100px;
   text-align: center;
 }
+@media screen and (max-width: 220px) {
+  main .quarta {
+    margin-top: 160px;
+  }
+}
 main .quarta h2 {
   text-align: center;
   font-weight: 400;
@@ -278,4 +289,212 @@ main .quarta i {
   font-size: 16px;
   margin: 10px 0;
   color: #31475e;
+}
+main .quarta article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  main .quarta article {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main .quarta article .box {
+  width: 100%;
+  max-width: calc(28.57142857%);
+  background-color: white;
+  box-shadow: 3px 3px 15px 0 #e0dddd;
+  text-align: left;
+  border-radius: 3px;
+  float: left;
+  margin: 20px 0 20px 0 ;
+}
+@media screen and (max-width: 768px) {
+  main .quarta article .box {
+    max-width: none;
+    width: 90%;
+  }
+}
+main .quarta article .box img {
+  width: 100%;
+}
+main .quarta article .box .descricao {
+  width: 100%;
+  padding: 7% 0 11% 7%;
+}
+main .quarta article .box .descricao h3 {
+  color: #31475e;
+  font-weight: normal;
+  font-size: 1.27rem;
+}
+main .quarta article .box .descricao p {
+  width: 90%;
+  color: #6a7c92;
+  margin: 8px 0  6px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: lighter;
+}
+main .quarta article .box .descricao button {
+  background-color: white;
+  width: 100%;
+  max-width: 98px;
+  height: 30px;
+  border-radius: 15px ;
+  border: 1px solid #6a7c92;
+  color: #6a7c92;
+  cursor: pointer;
+  transform: all 1.5s ease;
+}
+main .quarta article .box .descricao button:hover {
+  background-color: #6a7c92;
+  border: 1px solid white;
+  color: white;
+  transform: all 1.5s ease;
+}
+main .quinta {
+  width: 100%;
+  padding: 10px 2% 20px 2%;
+}
+main .quinta .banner {
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 20px 1.5% 30px 1.5%;
+}
+main .quinta .banner h2 {
+  color: #31475e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .quinta .banner .wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  main .quinta .banner .wraper {
+    flex-direction: column;
+  }
+}
+main .quinta .banner .wraper div {
+  width: 100%;
+  padding: 2%;
+  height: 100px;
+  border: 0.01px solid #dddddd;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  main .quinta .banner .wraper div {
+    padding-top: 6%;
+  }
+}
+main .quinta .banner .wraper div img {
+  vertical-align: middle;
+}
+main .contato {
+  width: 100%;
+}
+main .contato h2 {
+  color: #31475e;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .contato form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+main .contato form input,
+main .contato form textarea {
+  width: 100%;
+}
+main .contato form input:not([type="submit"]) {
+  height: 38px;
+  border-radius: calc(19px);
+  margin-bottom: 7px;
+  padding-left: 10px;
+  border: 1px solid #e4e1e1;
+  outline: 0;
+}
+main .contato form textarea {
+  height: 120px;
+  resize: none;
+  padding: 7px;
+  border-radius: calc(19px);
+  border: 1px solid #e4e1e1;
+  outline: 0;
+}
+main .contato form input[type="submit"] {
+  max-width: 130px;
+  height: 38px;
+  border-radius: 100px;
+  border: 0;
+  background-color: #ff5f27;
+  box-shadow: 0 8px 20px 0 #e0e0e0;
+  color: white;
+  cursor: pointer;
+  margin-top: 7px;
+}
+footer {
+  width: 100%;
+  padding: 0 3%;
+}
+footer .container {
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 0 2% 0;
+}
+@media screen and (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+footer .container div {
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  footer .container div {
+    padding: 10px;
+    border: 0.1px solid #31475e;
+    border-top: 0;
+  }
+}
+footer .container h3 {
+  color: #31475e ;
+  text-transform: capitalize;
+  font-weight: normal;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+footer .container p {
+  color: #31475e;
+  font-weight: lighter;
+}
+footer .container .news input {
+  width: 70%;
+  max-width: 208px;
+  height: 43px;
+  padding-left: 8px;
+  border-radius: 100px;
+  border: 1px solid #dfdbdb;
+  outline: 0;
+}
+footer .container .news button {
+  width: calc(20%);
+  margin-left: 10px;
+  max-width: 63px;
+  height: 43px;
+  border: 1px solid #31475e;
+  border-radius: 50px;
+  background: white;
+  font-size: 1.3rem;
+  cursor: pointer;
 }

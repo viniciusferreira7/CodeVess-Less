@@ -18,6 +18,10 @@ html,body{
     padding: 0 2%;
 }
 
+.clear{
+    clear: both;
+}
+
 header{
     width: 100%;
     height: 70.25vh;
@@ -111,6 +115,8 @@ header{
                    padding: 5px;
                    list-style-type: none;
                    list-style-position: inside;
+                   z-index: 2;
+                   border-top-right-radius:0 ;
 
                    li{
                     margin-bottom: 10px;
@@ -186,6 +192,7 @@ header{
                 border: 0;
                 background-color: #ff5f27;
                 color: white;
+                cursor: pointer;
             }
         }
     }
@@ -320,6 +327,10 @@ main{
         margin-top: 100px;
         text-align: center;
 
+        @media screen and (max-width:220px) {
+            margin-top: 160px;
+        }
+
         h2{
             text-align: center;
             font-weight: 400;
@@ -333,7 +344,245 @@ main{
             color: #31475e;
         }
 
+        article{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            
+            @media screen and (max-width:768px){
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+
+            .box{
+                width: 100%;
+                max-width:calc(100% / 3.5);
+                background-color: white;
+                box-shadow: 3px 3px 15px 0 rgb(224, 221, 221);
+                text-align: left;
+                border-radius: 3px;
+                float: left;
+                margin:20px 0 20px 0 ;
+
+                @media screen and (max-width:768px){
+                    max-width:none;
+                    width: 90%;
+                }
+                
+                
+                img{
+                    width: 100%;
+                }
+                
+                .descricao{
+                    width: 100%;
+                    padding:7% 0 11% 7%;
+
+                    h3{
+                        color: #31475e;
+                        font-weight: normal;
+                        font-size: 1.27rem;
+                    }
+
+                    p{
+                        width: 90%;
+                        color: #6a7c92;
+                        margin: 8px 0  6px 0;
+                        font-size: 15px;
+                        line-height: 1.6;
+                        font-weight: lighter;
+                    }
+
+                    button{
+                        background-color: white;
+                        width: 100%;
+                        max-width: 98px;
+                        height: 30px;
+                        border-radius:15px ;
+                        border: 1px solid #6a7c92;
+                        color: #6a7c92;
+                        cursor: pointer;
+                        transform: all 1.5s ease;
+                    }
+
+                    button:hover{
+                        background-color: #6a7c92;
+                        border: 1px solid white;
+                        color: white;
+                        transform: all 1.5s ease;
+                    }
+                }
+            }
+
+        }
+
     }
+
+    .quinta{
+        width:100%;
+        padding: 10px 2% 20px 2%;
+
+        .banner{
+            width: 100%;
+            background-color: #f7f7f7;
+            padding: 20px 1.5% 30px 1.5%;
+
+            h2{
+                color: #31475e;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .wraper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                }
+
+                div{
+                    width: 100%;
+                    padding: 2%;
+                    height: 100px;
+                    border: 0.01px solid rgb(221, 221, 221);
+                    text-align: center;
+
+                    @media screen and (max-width:768px) {
+                        padding-top: 6%;
+                    }
+
+                    img{
+                    vertical-align: middle;
+
+                    }
+                }
+            } 
+        }
+    }
+
+    .contato{
+        width:100%;
+
+        h2{
+            color:#31475e;
+            font-weight: normal;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form{
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+
+            input, textarea{
+                width: 100%;
+            }
+
+            input:not([type="submit"]){
+                height: 38px;
+                border-radius:calc(38px / 2);
+                margin-bottom: 7px;
+                padding-left: 10px;
+                border: 1px solid rgb(228, 225, 225);
+                outline: 0;
+            }
+
+            textarea{
+                height: 120px;
+                resize: none;
+                padding:7px;
+                border-radius:calc(38px / 2);
+                border: 1px solid rgb(228, 225, 225);
+                outline: 0;
+            }
+
+            input[type="submit"]{
+                max-width: 130px;
+                height: 38px;
+                border-radius: 100px;
+                border: 0;
+                background-color: #ff5f27;
+                box-shadow: 0 8px 20px 0 rgb(224, 224, 224, 50%);
+                color: white;
+                cursor: pointer;
+                margin-top: 7px;
+            }
+        }
+    }
+
+}
+
+footer{
+    width:100%;
+    padding: 0 3%;
+
+    .container{
+        max-width: 1180px;
+        display: flex;
+        justify-content: space-around;
+        padding: 5% 0 2% 0;
+
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        div{
+            width: 100%;
+            margin-bottom: 15px;
+
+            @media screen and (max-width:768px) {
+                padding: 10px;
+                border: 0.1px solid #31475e;
+                border-top: 0;
+            }
+        }
+
+        h3{
+            color:#31475e ;
+            text-transform: capitalize;
+            font-weight: normal;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        p{
+            color:#31475e;
+            font-weight: lighter;
+        }
+
+        .news{
+            input{
+                width:70%;
+                max-width:208px;
+                height: 43px;
+                padding-left: 8px;
+                border-radius: 100px;
+                border: 1px solid rgb(223, 219, 219);
+                outline: 0;
+            }
+
+            button{
+                width: calc(30% - 10px);
+                margin-left: 10px;
+                max-width: 63px;
+                height: 43px;
+                border: 1px solid #31475e;
+                border-radius: 50px;
+                background: white;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+        }
+    }
+
 
 }
 
